@@ -61,13 +61,19 @@ Si el botón dice que los avisos están bloqueados, hay que ir al candado de la 
 
 ### Cómo está organizado
 
-`index.html` | Lo que se ve: formulario, buscador, filtros y lista
-`src/models/Tarea.ts` | Cómo es una tarea y las reglas (agregar, editar, filtrar, duplicados)
-`src/views/TareasView.ts` | Dibuja las tarjetas y conecta los clics 
-`src/controllers/TareaController.ts` | Junta el modelo con la vista 
-`src/services/StorageService.ts` | Guarda y lee el `localStorage`
-`src/styles/styles.css` | El tema Halloween 
-`dist/` | El JavaScript que realmente abre el navegador
+index.html | Lo que se ve: formulario, buscador, filtros y lista
+
+src/models/Tarea.ts | Cómo es una tarea y las reglas (agregar, editar, filtrar, duplicados)
+
+src/views/TareasView.ts | Dibuja las tarjetas y conecta los clics 
+
+src/controllers/TareaController.ts | Junta el modelo con la vista 
+
+src/services/StorageService.ts | Guarda y lee el localStorage
+
+src/styles/styles.css | El tema Halloween 
+
+dist/ | El JavaScript que realmente abre el navegador
 
 
 ## Capturas de pantalla
