@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas por Prioridad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <span class="badge">Proyecto 4</span>
+            <h1>Gestor de Tareas por Prioridad</h1>
+            <p>Organiza tus pendientes por nivel de prioridad, categoría y fecha límite</p>
+            <button type="button" id="btn-activar-avisos" class="btn-avisos">Activar avisos del navegador</button>
+            <div id="panel-avisos" class="panel-avisos"></div>
+        </header>
+
+        <!-- Panel de Contadores por Prioridad (RF-07) -->
+        <div class="panel-contadores">
+            <div class="cnt-card cnt-alta">Alta: <span id="cnt-alta">0</span></div>
+            <div class="cnt-card cnt-media">Media: <span id="cnt-media">0</span></div>
+            <div class="cnt-card cnt-baja">Baja: <span id="cnt-baja">0</span></div>
+        </div>
+
+        <!-- Formulario (Agregar / Editar) -->
+        <form id="form-tarea" class="form-tarea">
+            <input type="hidden" id="tarea-id" value="">
+
+            <div class="campo">
+                <label for="titulo">Título de la Tarea</label>
+                <input type="text" id="titulo" placeholder="Ej. Estudiar POO...">
+            </div>
+
+            <div class="campo-grupo">
+                <div class="campo">
+                    <label for="seleccionar-prioridad">Prioridad</label>
+                    <select id="seleccionar-prioridad">
+                        <option value="alta">Alta</option>
+                        <option value="media" selected>Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="seleccionar-categoria">Categoría</label>
+                    <select id="seleccionar-categoria">
+                        <option value="Estudio">Estudio</option>
+                        <option value="Trabajo">Trabajo</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha-limite">Fecha Límite</label>
+                    <input type="date" id="fecha-limite">
+                </div>
+            </div>
+
+            <p id="mensaje-formulario" class="mensaje-formulario" role="alert"></p>
+            <button type="submit" id="btn-submit" class="btn-primary">Registrar Tarea</button>
+        </form>
+
+        <!-- Búsqueda, filtros y ordenamiento -->
+        <div class="filtros-orden-container">
+            <div class="campo campo-busqueda">
+                <label for="buscar-tarea">Buscar</label>
+                <input type="search" id="buscar-tarea" placeholder="Escribe el título...">
+            </div>
+            <div class="campo">
+                <label for="filtrar-prioridad">Prioridad</label>
+                <select id="filtrar-prioridad">
+                    <option value="todas">Todas</option>
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="filtrar-categoria">Categoría</label>
+                <select id="filtrar-categoria">
+                    <option value="todas">Todas</option>
+                    <option value="Estudio">Estudio</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="filtrar-estado">Estado</label>
+                <select id="filtrar-estado">
+                    <option value="todos">Todos</option>
+                    <option value="pendientes">Pendientes</option>
+                    <option value="completadas">Completadas</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="ordenar-por">Ordenar por</label>
+                <select id="ordenar-por">
+                    <option value="fecha">Fecha límite</option>
+                    <option value="prioridad">Prioridad</option>
+                    <option value="titulo">Título</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="seccion-lista">
+            <h2>Lista de Tareas</h2>
+            <div id="contenedor-tareas" class="contenedor-tareas"></div>
+        </section>
+    </div>
+
+    <script type="module" src="./dist/main.js"></script>
+</body>
+</html>
