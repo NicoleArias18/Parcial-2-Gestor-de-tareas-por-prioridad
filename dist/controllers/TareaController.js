@@ -98,7 +98,7 @@ export class TareaController {
             return;
         }
         if (Notification.permission === "denied") {
-            alert('Chrome bloqueó los avisos para esta página. En la barra de dirección, da clic al candado (o al icono de información), entra a Permisos / Notificaciones y elige Permitir. Luego recarga.');
+            alert('El navegador actual bloqueó los avisos para esta página. En la barra de dirección, da clic al candado (o al icono de información), entra a Permisos / Notificaciones y elige Permitir o activalas. Luego recarga la pagina.');
             this.view.actualizarBotonAvisos();
             return;
         }
