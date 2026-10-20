@@ -14,13 +14,17 @@ Esta app es para organizar tareas pendientes por prioridad, categoría y fecha l
 - Node.js, solo si vas a instalar dependencias o volver a compilar TypeScript
 
 ## Cómo ejecutarlo (GitHub)
-
+crea una carpeta para guardar el clone del repositorio
+Abre una nueva terminal que este en esa carpeta que creaste y ejecuta los siguientes comandos:
 ```bash
 git clone <URL-del-repositorio>
-cd "<nombre-de-la-carpeta-del-proyecto>"
+cd "<nombre-de-la-carpeta-del-proyecto>" (o dar clik derecho sobre la carpeta del proyecto que se crea y darle a la opcion "abrir en terminal integrado")
 npm install
 ```
-Después, da click derecho en `index.html` y selecciona de opcion `Open with Live Server`
+Después, entra en el archivo index.html, haz click derecho y selecciona de opcion `Open with Live Server`
+
+al inicio te mostrara un boton que dice: 'Avisos bloqueados. Clic para ver como activarlos'
+da click a ese boton y sigue las indicaciones que te da la pagina
 
 ## Documento técnico: mejoras y decisiones
 
