@@ -14,8 +14,8 @@ Esta app es para organizar tareas pendientes por prioridad, categoría y fecha l
 - Node.js, solo si vas a instalar dependencias o volver a compilar TypeScript
 
 ## Cómo ejecutarlo (GitHub)
-crea una carpeta para guardar el clone del repositorio
-Abre una nueva terminal que este en esa carpeta que creaste y ejecuta los siguientes comandos:
+crea una carpeta para guardar el clone del repositorio, abre esa misma carpeta en visual studio code
+Abre una nueva terminal dentro de visual studio code que este ubicada en esa carpeta que creaste y ejecuta los siguientes comandos:
 ```bash
 git clone <URL-del-repositorio>
 cd "<nombre-de-la-carpeta-del-proyecto>" (o dar clik derecho sobre la carpeta del proyecto que se crea y darle a la opcion "abrir en terminal integrado")
