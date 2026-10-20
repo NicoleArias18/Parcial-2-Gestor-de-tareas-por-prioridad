@@ -19,7 +19,6 @@ Esta app es para organizar tareas pendientes por prioridad, categoría y fecha l
 git clone <URL-del-repositorio>
 cd "<nombre-de-la-carpeta-del-proyecto>"
 npm install
-npx tsc
 ```
 Después, da click derecho en `index.html` y selecciona de opcion `Open with Live Server`
 
